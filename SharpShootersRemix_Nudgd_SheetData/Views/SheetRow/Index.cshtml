@@ -1,0 +1,44 @@
+﻿@model IEnumerable<SharpShootersRemix_Nudgd_SheetData.Models.SheetRow>
+
+<h2>Sheet Rows</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>DATA_TYPE</th>
+            <th>Client</th>
+            <th>Project</th>
+            <th>Signed_Date</th>
+            <th>Start_Date</th>
+            <th>End_Date</th>
+            <th>Vertical</th>
+            <th>Project_Type</th>
+            <th>Time_to_close</th>
+            <th>Time_in_project</th>
+            <th>Project_Milestones</th>
+            <th>Budget_SEK</th>
+            <th>Budget_h</th>
+            <th>Client_Cost</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var sheetRow in Model)
+        {
+            <tr>
+                <td>@sheetRow.DATA_TYPE</td>
+                <td>@sheetRow.Client</td>
+                <td>@sheetRow.Project</td>
+                <td>@sheetRow.Signed_Date</td>
+                <td>@sheetRow.Start_Date</td>
+                <td>@sheetRow.End_Date</td>
+                <td>@sheetRow.Vertical</td>
+                <td>@sheetRow.Project_Type</td>
+                <td>@sheetRow.Time_to_close</td>
+                <td>@sheetRow.Time_in_project</td>
+                <td>@sheetRow.Project_Milestones</td>
+                <td>@sheetRow.Budget_SEK</td>
+                <td>@sheetRow.Budget_h</td>
+                <td>@sheetRow.Client_Cost</td>
+            </tr>
+        }
+    </tbody>
+</table>
